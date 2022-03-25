@@ -32,7 +32,9 @@ header figure figcaption {
 
 header figure img {
   height: 50px;
+  width: 50px;
   border-radius: 50%;
+  object-fit: cover;
 }
 
 header button {
@@ -55,7 +57,7 @@ main {
   padding: 22px 25vw;
 }
 
-main section {
+main section, .postContainer {
   box-shadow: 0px 7px 14px -2px rgba(0,0,0,0.36);
   width: 100%;
   border-radius: 5px;
@@ -63,6 +65,7 @@ main section {
 
 .post {
   padding: 15px 33px 0px 21px;
+  margin-bottom: 15px;
   display: flex;
   flex-direction: row;
 
@@ -99,8 +102,10 @@ main section {
 
 .post img {
   height: 70px;
+  width: 70px;
   border-radius: 50%;
   margin-right: 33px;
+  object-fit: cover;
 }
 
 .dados {
@@ -117,6 +122,9 @@ main section {
     color: #6495ED;
     line-height: 15px;
     margin-bottom: 10px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
   }
 
   .apagar {
@@ -125,10 +133,13 @@ main section {
     font-size: 12px;
     color: #ED6464;
     line-height: 15px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
   }
 
   .data {
-    
+    cursor: pointer;
     margin-top: 10px;
   }
 
@@ -142,30 +153,28 @@ main section:first-child {
   position: relative;
 }
 
-main section input {
+main section form input {
   margin: 18px 0px 64px 18px;
   border: none;
 }
 
-main section button {
+#submitPost {
   padding: 5px;
   border: none;
   border-radius: 5px;
   background-color: #EDBC64;
 
+  font-size: 2.4rem;
+
   position: absolute;
-  left: calc(100% - 45px);
-  top: calc(100% - 46px);
+  left: calc(100% - 61px);
+  top: calc(100% - 60px);
 }
 
-main section button:hover {
+#submitPost:hover {
   cursor: pointer;
-}
-
-main section button i {
-  font-size: 1.4rem;
-  color: #F8E7E7;
-
+  color: #EDBC64;
+  background-color: white;
 }
 
 
@@ -227,7 +236,7 @@ main section button i {
   margin-bottom: 31px;
 }
 
-form {
+.modal {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -247,7 +256,7 @@ form {
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
     font-size: 13px;
-    color: #fff;
+    color: #000;
     line-height: 14px;
   }
 

@@ -11,8 +11,8 @@
   <header>
 
     <figure>
-      <img src=".//public/16363.png" >
-      <figcaption>Usuário</figcaption>
+      <img src=".//public/16363.png" id="fotoUsuario" >
+      <figcaption id="nomeUsuario" ></figcaption>
     </figure>
 
     <div>
@@ -26,11 +26,20 @@
 
     <section>
 
-      <input type="text" name="" id="" placeholder="Comece o seu post incrivel">
-    
-      <button> <i class="fa-solid fa-plus"></i> </button>
+      <form name="postar" id="postar">
+
+        <input type="text" name="" id="" placeholder="Comece o seu post incrivel">
+      
+        <input type="submit" id="submitPost" value="+"> 
+        <!-- <button id="postar" > <i class="fa-solid fa-plus"></i> </button> -->
+      </form>
 
     </section>
+
+    <div id="postContainer" >
+
+
+    </div>
 
     <!-- <section class="post" >
 
@@ -61,13 +70,13 @@
 
       <h2>Cadastro</h2>
 
-      <form>
+      <form name="cadastro" class="modal">
 
         <input type="text" placeholder="Nome de usuário" >
         
         <input type="email" placeholder="Email" >
 
-        <input type="file" >
+        <input type="text" placeholder="URL para foto de perfil" >
 
         <input type="password" placeholder="Senha" >
 
@@ -83,13 +92,13 @@
 
       <h2>Login</h2>
 
-      <form>
+      <form name="login" class="modal">
         
         <input type="email" placeholder="Email" >
 
         <input type="password" placeholder="Senha" >
 
-        <input type="submit" value="Cadastrar" >
+        <input type="submit" value="Login" >
 
       </form>
       
